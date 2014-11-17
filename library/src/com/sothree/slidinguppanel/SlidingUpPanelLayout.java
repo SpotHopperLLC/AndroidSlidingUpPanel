@@ -796,7 +796,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
             return super.onTouchEvent(ev);
         }
         mDragHelper.processTouchEvent(ev);
-        return true;
+        return mSlideState != PanelState.COLLAPSED;
     }
 
     private boolean isDragViewUnder(int x, int y) {
